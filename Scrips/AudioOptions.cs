@@ -9,6 +9,7 @@ public class AudioOptions : BaseMenu
 	enum OptionsMenuItems
 	{
         LanguageDropDown,
+        SoundVolume,
 		Back
 	}
     private List<string> DropdownOptionsItems = new List<string>();
@@ -31,6 +32,17 @@ public class AudioOptions : BaseMenu
                         _elementsOfInterface[index] = tempControl;
                         break;
                     }
+                case (int)OptionsMenuItems.SoundVolume:
+                    {
+                        var tempControl =
+                        CreateControl(Interface.InterfaceResources.SliderPrefab,
+                        Main.Instance.LangManager.Text("AudioMenuItems", "SoundVolume"));
+                        tempControl.GetControl.onValueChanged.AddListener(delegate {
+                            SliderValueChanged(tempControl.GetControl);
+                        });
+                        _elementsOfInterface[index] = tempControl;
+                        break;
+                    }
                 case (int)OptionsMenuItems.Back:
 					{
 						var tempControl =
@@ -47,7 +59,11 @@ public class AudioOptions : BaseMenu
 		_elementsOfInterface[0].Control.OnSelect(new
 		BaseEventData(EventSystem.current));
 	}
-	private void ToggleValueChanged(Toggle change)
+    private void SliderValueChanged(Slider slider)
+    {
+        Debug.Log("Audio settings changed");
+    }
+    private void ToggleValueChanged(Toggle change)
 	{
         Debug.Log("Audio settings changed");
 	}
