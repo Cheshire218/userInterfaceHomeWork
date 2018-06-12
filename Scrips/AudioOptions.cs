@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class VideoOptions : BaseMenu
+public class AudioOptions : BaseMenu
 {
 	enum OptionsMenuItems
 	{
@@ -23,22 +23,10 @@ public class VideoOptions : BaseMenu
                 case (int)OptionsMenuItems.LanguageDropDown:
                     {
                         var tempControl =
-                        CreateControl(Interface.InterfaceResources.DropdownPrefab,
-                        Main.Instance.LangManager.Text("GameOptions", "QualityLabel"));
-                        DropdownOptionsItems.Clear();
-                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "VeryLow"));
-                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "Low"));
-                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "Medium"));
-                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "High"));
-                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "VeryHigh"));
-                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "Ultra"));
-                        tempControl.GetControl.ClearOptions();
-                        tempControl.GetControl.AddOptions(DropdownOptionsItems);
-
-
-                        tempControl.GetControl.value = DropdownOptionsItems.IndexOf(Main.Instance.LangManager.LanguageCode);
+                        CreateControl(Interface.InterfaceResources.TogglePrefab,
+                        Main.Instance.LangManager.Text("AudioMenuItems", "Background"));
                         tempControl.GetControl.onValueChanged.AddListener(delegate {
-                            DropdownValueChanged(tempControl.GetControl);
+                            ToggleValueChanged(tempControl.GetControl);
                         });
                         _elementsOfInterface[index] = tempControl;
                         break;
@@ -59,9 +47,9 @@ public class VideoOptions : BaseMenu
 		_elementsOfInterface[0].Control.OnSelect(new
 		BaseEventData(EventSystem.current));
 	}
-	private void DropdownValueChanged(Dropdown change)
+	private void ToggleValueChanged(Toggle change)
 	{
-        Debug.Log("Video settings changed");
+        Debug.Log("Audio settings changed");
 	}
 	private void Back()
 	{

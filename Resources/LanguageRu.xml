@@ -72,6 +72,10 @@
   
   <group id="QualityNames">
 
+    <string id="QualityLabel">
+      <text>Качество графики</text>
+    </string>
+
     <string id="VeryLow">
       <text>Очень низко</text>
     </string>

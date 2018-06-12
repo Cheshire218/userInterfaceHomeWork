@@ -72,6 +72,10 @@
   
   <group id="QualityNames">
 
+    <string id="QualityLabel">
+      <text>Quality level</text>
+    </string>
+
     <string id="VeryLow">
       <text>Very low</text>
     </string>
