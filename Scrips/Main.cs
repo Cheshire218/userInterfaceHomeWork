@@ -19,7 +19,6 @@ public class Main : Singleton<Main>
 	{
 		LangManager = new LangManager(); // ?
 		LangManager.Init("Language");
-        //LangManager.Init("Language", "En");
         DontDestroyOnLoad(gameObject);
 	}
 }

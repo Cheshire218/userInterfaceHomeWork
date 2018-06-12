@@ -9,19 +9,19 @@
   <group id="MainMenuItems">
 
     <string id="NewGame">
-      <text>Новая игра</text>
+      <text>New game</text>
     </string>
     
     <string id="Continue">
-      <text>Продолжить</text>
+      <text>Continue</text>
     </string>
 
     <string id="Options">
-      <text>Настройки</text>
+      <text>Options</text>
     </string>
 
     <string id="Quit">
-      <text>Выход</text>
+      <text>Quit</text>
     </string>
 
   </group>
@@ -29,19 +29,19 @@
   <group id="OptionsMenuItems">
 
     <string id="Video">
-      <text>Видео</text>
+      <text>Video</text>
     </string>
 
     <string id="Sound">
-      <text>Звук</text>
+      <text>Sound</text>
     </string>
 
     <string id="Game">
-      <text>Игровые настройки</text>
+      <text>Game options</text>
     </string>
 
     <string id="Back">
-      <text>Назад</text>
+      <text>Back</text>
     </string>
 
   </group>
@@ -49,23 +49,23 @@
   <group id="VideoOptionsMenuItems">
 
     <string id="CurrentName">
-      <text>Уровень графики</text>
+      <text>Video settings</text>
     </string>
 
     <string id="SoftParticles">
-      <text>Мягкие частицы</text>
+      <text>Soft particles</text>
     </string>
 
     <string id="ShadowQuality">
-      <text>Качество теней</text>
+      <text>Shadow quality</text>
     </string>
 
     <string id="SaveAndReturn">
-      <text>Сохранить и выйти</text>
+      <text>Save and return</text>
     </string>
 
     <string id="Back">
-      <text>Назад</text>
+      <text>Back</text>
     </string>
 
   </group>
@@ -73,27 +73,27 @@
   <group id="QualityNames">
 
     <string id="Very Low">
-      <text>Очень низкий</text>
+      <text>Very low</text>
     </string>
 
     <string id="Low">
-      <text>Низко</text>
+      <text>Low</text>
     </string>
 
     <string id="Medium">
-      <text>Средне</text>
+      <text>Medium</text>
     </string>
 
     <string id="High">
-      <text>Высоко</text>
+      <text>High</text>
     </string>
 
     <string id="Very High">
-      <text>Очень высоко</text>
+      <text>Very high</text>
     </string>
 
     <string id="Ultra">
-      <text>Максимально</text>
+      <text>Ultra</text>
     </string>
 
   </group>
@@ -101,15 +101,15 @@
   <group id="GameOptions">
 
     <string id="Flashlight">
-      <text>Вкл/Выкл фонарь</text>
+      <text>Flashlight on/off</text>
     </string>
 
     <string id="SaveAndBack">
-      <text>Сохранить и выйти</text>
+      <text>Save and back</text>
     </string>
 
     <string id="Select">
-      <text>Введите значение</text>
+      <text>Pick value</text>
     </string>
 
   </group>
@@ -117,15 +117,15 @@
   <group id="AudioMenuItems">
 
     <string id="Background">
-      <text>Фоновая музыка</text>
+      <text>Background music</text>
     </string>
     
     <string id="SoundVolume">
-      <text>Звуки</text>
+      <text>Sound volume</text>
     </string>
 
     <string id="Back">
-      <text>Назад</text>
+      <text>Back</text>
     </string>
 
   </group>
@@ -133,23 +133,23 @@
   <group id="MenuPause">
 
     <string id="Resume">
-      <text>Продолжить</text>
+      <text>Continue</text>
     </string>
 
     <string id="Save">
-      <text>Сохранить</text>
+      <text>Save</text>
     </string>
 
     <string id="Options">
-      <text>Настройки</text>
+      <text>Options</text>
     </string>
 
     <string id="MainMenu">
-      <text>Главное меню</text>
+      <text>Main menu</text>
     </string>
 
     <string id="Quit">
-      <text>Выход из игры</text>
+      <text>Quit</text>
     </string>
 
   </group>
@@ -157,11 +157,11 @@
   <group id="OptionsPauseMenu">
 
     <string id="SetColor">
-      <text>Изменить цвет</text>
+      <text>Set color</text>
     </string>
 
     <string id="Back">
-      <text>Назад</text>
+      <text>Back</text>
     </string>
 
   </group>

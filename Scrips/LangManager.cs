@@ -14,6 +14,10 @@ public class LangManager  {
 			this.LanguageCode = Application.systemLanguage ==
 			SystemLanguage.Russian ? "Ru" : "En";
 		}
+        else
+        {
+            this.LanguageCode = languageCode;
+        }
 		var config = LoadResource(file);
 		if (!config) return;
 		_root.LoadXml(config.text);
