@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class GameOptions : BaseMenu
+public class VideoOptions : BaseMenu
 {
 	enum OptionsMenuItems
 	{
         LanguageDropDown,
 		Back
 	}
-    private List<string> DropdownOptionsItems = new List<string> { "Ru", "En" };
+    private List<string> DropdownOptionsItems = new List<string>();
 
     private void CreateMenu(string[] menuItems)
 	{
@@ -24,9 +24,18 @@ public class GameOptions : BaseMenu
                     {
                         var tempControl =
                         CreateControl(Interface.InterfaceResources.DropdownPrefab,
-                        Main.Instance.LangManager.Text("GameOptions", "Language"));
+                        Main.Instance.LangManager.Text("OptionsMenuItems", "Game"));
+                        DropdownOptionsItems.Clear();
+                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "VeryLow"));
+                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "Low"));
+                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "Medium"));
+                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "High"));
+                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "VeryHigh"));
+                        DropdownOptionsItems.Add(Main.Instance.LangManager.Text("QualityNames", "Ultra"));
                         tempControl.GetControl.ClearOptions();
                         tempControl.GetControl.AddOptions(DropdownOptionsItems);
+
+
                         tempControl.GetControl.value = DropdownOptionsItems.IndexOf(Main.Instance.LangManager.LanguageCode);
                         tempControl.GetControl.onValueChanged.AddListener(delegate {
                             DropdownValueChanged(tempControl.GetControl);
@@ -50,10 +59,19 @@ public class GameOptions : BaseMenu
 		_elementsOfInterface[0].Control.OnSelect(new
 		BaseEventData(EventSystem.current));
 	}
-
+	private void LoadVideoOptions()
+	{
+		Hide();
+		Interface.Execute(InterfaceObject.VideoOptions);
+	}
+	private void LoadSoundOptions()
+	{
+		Hide();
+		Interface.Execute(InterfaceObject.AudioOptions);
+	}
 	private void DropdownValueChanged(Dropdown change)
 	{
-        Main.Instance.LangManager.Init("Language", DropdownOptionsItems[change.value]);
+        Debug.Log("Video settings changed");
 	}
 	private void Back()
 	{
